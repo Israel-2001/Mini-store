@@ -7,14 +7,14 @@ import logo1 from '../Images/VistaMart.jpg'
 
 export default function Header() {
   return (
-          <div className="w-full h-20 px-[100px] py-[32px] flex justify-evenly items-center">
-            <div className="flex items-center justify-start">
+          <div className="w-full px-[100px] py-[16px] inline-flex justify-center items-center bg-white">
+            <div className="flex flex-end gap-[57px]">
                   <div className='flex items-center justify-start'>
                      <img src={logo} alt="logo" />
                      <img src={logo1} alt="logo" />
                   </div>
-                  <div className="flex items-center justify-center gap-3 px-6">
-                      <div className='px-[24px] py-[12px] font-normal text-[12px]'>
+                  <div className="flex items-center justify-center py-[12px] px[24px]">
+                      <div className='flex py-3 px-6 justify-center items-center'>
                           <p className='text-black text-[16px] font-sans font-normal '>Categories</p>
                       </div>
                       <div className='px-[24px] py-[12px] font-normal text-[12px]'>
@@ -24,17 +24,26 @@ export default function Header() {
                         <p className='text-black text-[16px] font-sans font-normal '>Contact Us</p>
                       </div>
                   </div>
-                  <div className="flex items-center justify-end gap-10 text-center">
-                      <div className="flex">
-                          <input type="search" name="search" id="search" placeholder='Search Product' className="border rounded-full bg-slate-100 text-[12px] px-[20px] items-center py-[6px]" />
-                          <img src={search} alt="search" className="relative items-center w-6 h-6 pt-[4px] right-8" />
+                  <div className="flex items-center gap-[49px]">
+                      <div 
+                        className="flex justify-center items-center bg-slate-100 pl-[20px] 
+                        py-[6px] rounded-[32px] gap-[20px]"
+                      >
+                          <input 
+                            type="search" 
+                            name="search" 
+                            id="search" 
+                            placeholder='Search Product' 
+                            className="flex rounded-[32px] text-[12px] 
+                            items-center bg-slate-100 text-black " />
+                          <img src={search} alt="search" className="w-6 h-6" />
                       </div>
                          <div className='flex gap-2'>
                             <img src={profile} alt="profile" />
                             <h3>Account</h3>
                          </div>
                          <div>
-                            <img src={cart} alt="cart" />
+                           <img src={cart} alt="cart" />
                          </div>
                   </div>
             </div>

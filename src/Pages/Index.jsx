@@ -13,6 +13,7 @@ import facebook from '../Images/Vector.png'
 import linkedin from '../Images/Vector (1).png'
 import twitter from '../Images/Vector (2).png'
 import instagram from '../Images/hugeicons_instagram.png'
+import naira from '../Images/Vector.jpg'
 import button from '../Images/Button.png'
 
 
@@ -48,7 +49,7 @@ const productList = ({ addToCart }) => {
     <>
       <Header />
       
-        <div className="flex flex-row items-center justify-center px-[50px] bg-blue-100">
+        <div className="flex flex-row items-center px-[100px] justify-center bg-blue-100">
             <div className="flex flex-col  pt-[96px] pb-[115px]">
                 <h2 className="text-[48px] font-semibold">Every Slip is a Step Towards <br />Sustainability</h2>
                 <p className="text-[16px] font-normal">Our eco-friendly water bottles offer sustainable hydration solutions.
@@ -60,47 +61,58 @@ const productList = ({ addToCart }) => {
             </div>
         </div>
       
-      <div className="mt-2 mb-6 px-[50px]"> 
-      <h1 className="font-semibold text-[32px] text-center font-[poppins] py-[52px]">Discover Our Products</h1>
-        <ul className='items-center justify-center sm:grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4'>
-          {products.map(product => (
-            <li className="mx-3 mb-6" key={product.id}>
-              <div
-                data-testid="movie-card" 
-                className="bg-white border-gray-300 text-white 
-                cursor-pointer rounded-[15px] flex flex-col"
-              >
-                <img 
-                  data-testid="movie-poster"
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full bg-[#F0F0F0]"
-                />
-                <div className='text-gray-400'>
-                  <h2 className="text-xl font-bold ">{product.name}</h2>
-                  <p className="">{product.description}</p>
-                  <p className="font-bold text-black"> {product.price}</p>
+      <div className="flex w-full flex-col items-center gap-[74px] px-[100px] py-[88px]"> 
+        <div>
+          <h1 className="font-semibold text-[32px] text-center font-[poppins]">Discover Our Products</h1>
+        </div>
+        <div className="flex flex-col items-start self-stretch justify-center gap-8 md:items-center sm:items-center">          
+          <ul className='flex flex-col items-start self-stretch gap-8 sm:grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+            {products.map(product => (
+              <li className="flex flex-col items-start" key={product.id}>
+                <div
+                  data-testid="movie-card" 
+                  className="bg-white border-gray-300 text-white 
+                  cursor-pointer rounded-[15px] flex flex-col shrink-0"
+                >
+                  <div className="flex h-[348px] pt-[40px] px-[81px] pb-[39px] bg-[#F0F0F0]">                    
+                    <img 
+                      data-testid="movie-poster"
+                      src={product.image}
+                      alt={product.name}
+                      className="w-[133px] h-[269px] shrink-0"
+                    />
+                  </div>
+                  <div className='flex flex-col items-start self-stretch gap-3'>
+                    <div className="flex flex-col items-start self-stretch gap-1 text-[#777777]">                      
+                      <h2 className="text-xl">{product.name}</h2>
+                      <p className="text-sm">{product.description}</p>
+                    </div>
+                    <div className="flex items-center gap-[2px] self-stretch"> 
+                      <img src={naira} alt="naira" />                     
+                      <p className="font-bold text-black"> {product.price}</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-                {/* <div className="pb-3 my-10 text-white bg-gray-900">
-                    <div class="w-[295px] h-[348px] bg-zinc-100 rounded-lg flex-col justify-center items-center flex">
-                      <img className="rounded-[15px] w-full h-[50%]" alt="" src={product.image} />
-                    </div>
-                    <div class="self-stretch h-[86px] flex-col justify-start items-start gap-3 flex">
-                        <div class="self-stretch h-[50px] flex-col justify-start items-start gap-1 flex">
-                            <div class="w-[295px] h-8 justify-center items-center inline-flex">
-                                <h3 class="w-[295px] text-neutral-500 text-xl font-medium font-['Poppins'] leading-loose">{product.name}</h3>
-                            </div>
-                            <div class="self-stretch text-neutral-600 text-xs font-normal font-['Poppins'] leading-[14.40px]">{product.description}</div>
-                        </div>
-                        <div class="self-stretch justify-start items-center gap-0.5 inline-flex">
-                            <div class="text-teal-950 text-xl font-semibold font-['Poppins'] leading-normal">{product.price}</div>
-                        </div>
-                    </div>
-                </div> */}
-            </li>
-          ))}
-        </ul>
+                  {/* <div className="pb-3 my-10 text-white bg-gray-900">
+                      <div class="w-[295px] h-[348px] bg-zinc-100 rounded-lg flex-col justify-center items-center flex">
+                        <img className="rounded-[15px] w-full h-[50%]" alt="" src={product.image} />
+                      </div>
+                      <div class="self-stretch h-[86px] flex-col justify-start items-start gap-3 flex">
+                          <div class="self-stretch h-[50px] flex-col justify-start items-start gap-1 flex">
+                              <div class="w-[295px] h-8 justify-center items-center inline-flex">
+                                  <h3 class="w-[295px] text-neutral-500 text-xl font-medium font-['Poppins'] leading-loose">{product.name}</h3>
+                              </div>
+                              <div class="self-stretch text-neutral-600 text-xs font-normal font-['Poppins'] leading-[14.40px]">{product.description}</div>
+                          </div>
+                          <div class="self-stretch justify-start items-center gap-0.5 inline-flex">
+                              <div class="text-teal-950 text-xl font-semibold font-['Poppins'] leading-normal">{product.price}</div>
+                          </div>
+                      </div>
+                  </div> */}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
       <div class="w-full h-[415px] px-[100px] py-16 bg-sky-950 flex-col justify-center items-start gap-16 inline-flex text-white">
         <div class="w-full justify-evenly items-start gap-44 inline-flex">
