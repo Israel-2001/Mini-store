@@ -122,8 +122,8 @@ const productList = ({ addToCart }) => {
         </div>
       </div>
       
-      <div class="w-full px-[20px] py-[40px] md:px-[100px] md:py-16 bg-sky-950 flex-col justify-center items-start gap-16 inline-flex text-white">
-        <div class="w-full justify-evenly items-start gap-44 flex-col text-black md:inline-flex">
+      <div class="w-full px-[20px] py-[40px] md:px-[100px] md:py-16 bg-sky-950 flex-row justify-center items-start gap-16 md:flex-row text-white">
+        <div class="w-full flex justify-evenly items-start gap-44 flex-col md:flex-row text-black">
             <div class="w-full flex-col justify-start items-start gap-8 md:inline-flex ">
                 <div class="self-stretch text-black text-base font-medium font-['Poppins'] leading-none">Link</div>
                 <div class="self-stretch h-28 flex-col justify-start items-start gap-4 flex">
