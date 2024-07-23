@@ -1,24 +1,27 @@
 import React from 'react'
 import Header from '../component/Header'
 import arrow from '../Images/ion_arrow-back.jpg'
-import image1 from '../Images/Frame 21.png';
+import image1 from '../Images/assortment-tumbler-with-copy-space 1.png';
 import image2 from '../Images/Infuser.png'
 import naira from '../Images/Vector.jpg'
 import facebook from '../Images/Vector.png'
 import linkedin from '../Images/Vector (1).png'
 import twitter from '../Images/Vector (2).png'
 import instagram from '../Images/hugeicons_instagram.png'
+import { Link } from 'react-router-dom';
 
 export default function Checkout() {
   
   return (
     <>
       <Header />
-      <div className='pb-12 bg-[#F4F4F4]'>        
-        <div className='flex flex-row gap-1 pt-[64px] pl-[132px] '>
-          <img src={arrow} alt="" className='bg-[#F4F4F4]' />
-          <p>Back</p>
-        </div>
+      <div className='pb-12 bg-[#F4F4F4]'>
+        <Link to="/">
+          <div className='flex flex-row gap-1 pt-[64px] pl-[132px] '>
+            <img src={arrow} alt="" className='bg-[#F4F4F4]' />
+            <p>Back</p>
+          </div>
+        </Link>
         <h1 className='text-center text-[24px] font-bold pt-[74px] font-[poppins]'>Check Out</h1>
         <div className='flex  w-full px-[100px] gap-36'>
           <div className='w-full mt-8 bg-white rounded-lg'>

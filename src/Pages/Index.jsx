@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../component/Header";
 import hero from '../Images/fit-dark-skinned-man-athlete-drinking-water-out-plastic-bottle-after-hard-cardio-running-workout 1.png'
-import image1 from '../Images/Frame 21.png'
+import image1 from '../Images/assortment-tumbler-with-copy-space 1.png'
 import image2 from '../Images/Infuser.png'
 import image3 from '../Images/Collapsible.png'
 import image4 from '../Images/Glass.png'
@@ -48,46 +48,53 @@ const productList = ({ addToCart }) => {
   return (    
     <>
       <Header />
-      
-        <div className="flex flex-row items-center px-[100px] justify-center bg-blue-100">
-            <div className="flex flex-col  pt-[96px] pb-[115px]">
-                <h2 className="text-[48px] font-semibold">Every Slip is a Step Towards <br />Sustainability</h2>
-                <p className="text-[16px] font-normal">Our eco-friendly water bottles offer sustainable hydration solutions.
-                  Enjoy pure refreshment while reducing environmental impact</p>
-                  <img src={button} alt="" className="w-32 h-10 mt-3 cursor-pointer" />
+      <div className="bg-blue-100">
+        <div className="w-[80%] mx-auto flex justify-center">
+            <div className="flex flex-col pt-[96px] pb-[115px]">
+              <h2 className="text-[48px] font-semibold">Every Slip is a Step Towards <br />Sustainability</h2>
+              <p className="text-[16px] font-normal">Our eco-friendly water bottles offer sustainable hydration solutions.
+                Enjoy pure refreshment while reducing environmental impact
+              </p>
+              <img src={button} alt="" className="w-32 h-10 mt-3 cursor-pointer" />
             </div>
-            <div className="mt-36">              
+            <div className="hidden md:block mt-36">              
               <img className="" alt="hero" src={hero} />
             </div>
         </div>
-      
-      <div className="flex w-full flex-col items-center gap-[74px] px-[100px] py-[88px]"> 
-        <div>
-          <h1 className="font-semibold text-[32px] text-center font-[poppins]">Discover Our Products</h1>
-        </div>
-        <div className="flex flex-col items-start self-stretch justify-center gap-8 md:items-center sm:items-center">          
-          <ul className='flex flex-col items-start self-stretch gap-8 sm:grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+        <div className="w-full bg-[rgb(240,240,240)]"> 
+          <h1 
+            className="font-semibold px-10 text-[32px] 
+            text-center font-[poppins]">
+            Discover Our Products
+          </h1>
+          <ul className='w-[90%] mx-auto md:w-[80%] flex 
+            flex-col flex-wrap items-center content-center 
+            self-stretch justify-center gap-5  md:gap-8 
+            sm:grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 
+            xl:grid-cols-4'
+          >
             {products.map(product => (
-              <li className="flex flex-col items-start" key={product.id}>
+              <li className="" key={product.id}>
                 <div
                   data-testid="movie-card" 
-                  className="bg-white border-gray-300 text-white 
-                  cursor-pointer rounded-[15px] flex flex-col shrink-0"
+                  className="w-full border-gray-300 text-white 
+                  cursor-pointer justify-center items-center rounded-[15px] 
+                  flex flex-col shrink-0 bg-white"
                 >
-                  <div className="flex h-[348px] pt-[40px] px-[81px] pb-[39px] bg-[#F0F0F0]">                    
+                  <div className="flex w-full h-[348px] justify-center items-center">                    
                     <img 
                       data-testid="movie-poster"
                       src={product.image}
                       alt={product.name}
-                      className="w-[133px] h-[269px] shrink-0"
+                      className="w-[133px] h-[269px] shrink-0 items-center"
                     />
                   </div>
-                  <div className='flex flex-col items-start self-stretch gap-3'>
-                    <div className="flex flex-col items-start self-stretch gap-1 text-[#777777]">                      
+                  <div className='flex flex-col self-stretch gap-3 text-center bg-white md:items-start'>
+                    <div className="text-center md:text-start text-[#777777]">                      
                       <h2 className="text-xl">{product.name}</h2>
                       <p className="text-sm">{product.description}</p>
                     </div>
-                    <div className="flex items-center gap-[2px] self-stretch"> 
+                    <div className="flex justify-center md:items-center items-center gap-[2px] "> 
                       <img src={naira} alt="naira" />                     
                       <p className="font-bold text-black"> {product.price}</p>
                     </div>
@@ -114,13 +121,14 @@ const productList = ({ addToCart }) => {
           </ul>
         </div>
       </div>
-      <div class="w-full h-[415px] px-[100px] py-16 bg-sky-950 flex-col justify-center items-start gap-16 inline-flex text-white">
-        <div class="w-full justify-evenly items-start gap-44 inline-flex">
-            <div class="w-full flex-col justify-start items-start gap-8 inline-flex">
-                <div class="self-stretch text-white text-base font-medium font-['Poppins'] leading-none">Link</div>
+      
+      <div class="w-full px-[20px] py-[40px] md:px-[100px] md:py-16 bg-sky-950 flex-col justify-center items-start gap-16 inline-flex text-white">
+        <div class="w-full justify-evenly items-start gap-44 flex-col text-black md:inline-flex">
+            <div class="w-full flex-col justify-start items-start gap-8 md:inline-flex ">
+                <div class="self-stretch text-black text-base font-medium font-['Poppins'] leading-none">Link</div>
                 <div class="self-stretch h-28 flex-col justify-start items-start gap-4 flex">
                     <div class="w-[89px] justify-start items-center inline-flex">
-                        <div class="grow shrink basis-0 text-white text-base font-normal font-['Poppins'] leading-none">Categories</div>
+                        <div class="grow shrink basis-0 text-black text-base font-normal font-['Poppins'] leading-none">Categories</div>
                     </div>
                     <div class="self-stretch justify-start items-center inline-flex">
                         <div class="text-white/opacity-80 text-base font-normal font-['Poppins'] leading-none">New Arrivals</div>
@@ -144,7 +152,7 @@ const productList = ({ addToCart }) => {
                     </div>
                 </div>
             </div>
-            <div class="w-[151px] flex-col justify-start items-start gap-8 inline-flex">
+            <div class="w-[151px] flex-col justify-start items-start gap-8 md:inline-flex">
                 <div class="self-stretch text-white text-base font-medium font-['Poppins'] leading-none">Follow Us</div>
                 <div class="w-[130px] h-[26px] justify-start items-center gap-2 inline-flex">
                     <div class="w-[26.54px] h-[26.54px] p-[3.32px] bg-white rounded-[26.54px] justify-center items-center flex">
