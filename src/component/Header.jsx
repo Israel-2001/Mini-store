@@ -4,12 +4,19 @@ import cart from '../Images/Component 16.png'
 import logo from '../Images/Group 1.jpg'
 import logo1 from '../Images/VistaMart.jpg'
 import navBar from '../Images/Vector (5).png'
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { useState } from 'react'
 
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+  
+  const toggleNavBar = () => {
+    setIsOpen(!isOpen);
+  };
   return (
-      <div className="w-[80%] h-[78px] mx-auto flex items-center justify-between md:gap-[47px]">
+    <>
+      <div className="w-[80%] h-[78px] bg-white mx-auto flex items-center justify-between md:gap-[47px]">
         <div className='flex items-center justify-start'>
            <img src={logo} alt="logo" className='w-16 h-8' />
            <img src={logo1} alt="logo" className='h-8 w-28' />
@@ -33,7 +40,7 @@ export default function Header() {
               items-center bg-slate-100 text-black" />
             <img src={search} alt="search" className="w-6 h-6 " />
           </div>
-          <div className='hidden gap-3  xl:flex'>                  
+          <div className='hidden gap-3 xl:flex'>                  
             <img src={profile} alt="profile" />
             <div className='flex gap-2'>
               <h3>Account</h3>
@@ -45,10 +52,32 @@ export default function Header() {
             </div>
           </div>
         </div>
-        <div className='block xl:hidden'>
-          <img src={navBar} alt="" />
+        <div 
+          onClick={toggleNavBar} 
+          className='block xl:hidden'
+        >
+          {
+          !isOpen ? 
+            <img 
+              src={navBar} 
+              alt='navBar' 
+            />
+             : 
+            <h1 className='text-2xl font-bold cursor-pointer'>
+              X
+            </h1>
+          }
         </div>
-      </div>
+      </div>        
+        <div className='flex-col items-start justify-start w-full gap-20 mt-3 fex bg-slate-500 xl:hidden'>        
+          {isOpen && (
+            <ul>
+              <li><NavLink to={"/"}>Home</NavLink></li>
+              <li><NavLink to={"/checkout"}>Checkout</NavLink></li>
+            </ul>
+          )}
+        </div>
+    </>
   )
 }
 
