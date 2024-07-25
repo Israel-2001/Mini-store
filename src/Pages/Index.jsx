@@ -84,7 +84,7 @@ const productList = ({ addToCart }) => {
                         data-testid="movie-poster"
                         src={product.image}
                         alt={product.name}
-                        className="w-[133px] h-[269px] shrink-0 items-center"
+                        className="w-[133px] shrink-0 items-center"
                       />
                     </div>
                     <div className='flex flex-col self-stretch gap-3 text-center bg-white md:items-start'>
