@@ -17,10 +17,12 @@ export default function Header() {
   return (
     <>
       <div className="w-[80%] h-[78px] bg-white mx-auto flex items-center justify-between md:gap-[47px]">
-        <div className='flex items-center justify-start'>
-           <img src={logo} alt="logo" className='w-16 h-8' />
-           <img src={logo1} alt="logo" className='h-8 w-28' />
-        </div>
+        <Link to="/">
+          <div className='flex items-center justify-start'>
+            <img src={logo} alt="logo" className='w-16 h-8' />
+            <img src={logo1} alt="logo" className='h-8 w-28' />
+          </div>
+        </Link>
         <div className="xl:flex hidden items-center justify-center py-[12px] px[10px] gap-4">
                 <p className='text-black text-[16px] font-sans font-normal '>Categories</p>
                 <p className='text-black text-[16px] font-sans font-normal '>New Arrivals</p>
@@ -69,14 +71,14 @@ export default function Header() {
           }
         </div>
       </div>        
-        <div className='flex-col items-start justify-start w-full gap-20 mt-3 fex bg-slate-500 xl:hidden'>        
-          {isOpen && (
-            <ul>
-              <li><NavLink to={"/"}>Home</NavLink></li>
-              <li><NavLink to={"/checkout"}>Checkout</NavLink></li>
-            </ul>
-          )}
+        {isOpen && (
+          <div className='flex-col items-start justify-start w-full h-[100%] gap-20 mt-3 flex bg-blue-100 relative top-0 xl:hidden'>        
+              <ul className='w-[90%] bg-red-400 h-full py-32'>
+                <li><NavLink to={"/"}>Home</NavLink></li>
+                <li><NavLink to={"/checkout"}>Checkout</NavLink></li>
+              </ul>
         </div>
+        )}
     </>
   )
 }

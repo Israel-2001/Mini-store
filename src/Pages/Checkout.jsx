@@ -4,10 +4,6 @@ import arrow from '../Images/ion_arrow-back.jpg'
 import image1 from '../Images/assortment-tumbler-with-copy-space 1.png';
 import image2 from '../Images/Infuser.png'
 import naira from '../Images/Vector.jpg'
-import facebook from '../Images/Vector.png'
-import linkedin from '../Images/Vector (1).png'
-import twitter from '../Images/Vector (2).png'
-import instagram from '../Images/hugeicons_instagram.png'
 import { Link } from 'react-router-dom';
 import Footer from '../component/Footer';
 
@@ -18,16 +14,16 @@ export default function Checkout() {
       <Header />
       <div className='pb-12 bg-[#F4F4F4]'>
         <Link to="/">
-          <div className='flex flex-row gap-1 pt-[64px] pl-[132px] '>
+          <div className='hidden md:flex flex-row gap-1 pt-[64px] pl-[132px] '>
             <img src={arrow} alt="" className='bg-[#F4F4F4]' />
             <p>Back</p>
           </div>
         </Link>
-        <h1 className='text-center text-[24px] font-bold pt-[74px] font-[poppins]'>Check Out</h1>
-        <div className='flex flex-col w-full px-[100px] bg-white gap-36 md:flex-row'>
+        <h1 className='text-start text-[24px] font-bold pt-[74px] font-[poppins] md:text-center'>Check Out</h1>
+        <div className='w-[90%] flex flex-col mx-auto bg-white gap-36 xl:flex-row'>
           <div className='bg-white rounded-lg xl:w-full'>
-            <form className='w-[95%] mx-auto flex-col px-[24px] mt-[30px]'>
-              <h1 className='font-[poppins] text-[16px] font-medium'>Payment Method</h1>
+            <form className='text-center w-[95%] mx-auto flex-col px-[24px] mt-[30px]'>
+              <h1 className='text-start font-[poppins] text-[16px] font-medium md:text-center'>Payment Method</h1>
               <div className='flex flex-col items-center justify-between gap-3 my-8 xl:flex-row'>
                 <div className='flex flex-col gap-1'>
                   <p className='font-[poppins] text-[12px] font-normal'>Email</p>
@@ -63,7 +59,7 @@ export default function Checkout() {
               </div>
             </form>
           </div>
-          <div className='mt-8 bg-white w-[50%] rounded-lg'>
+          <div className='w-full mt-8 bg-white rounded-lg'>
             <div className='flex-col px-[24px]'>
               <h2 className='font-[poppins] text-[20px] font-medium mt-[22px]'>Order Summary</h2>
               <div className='flex items-center justify-between py-6 mt-8'>
